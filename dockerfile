@@ -10,15 +10,15 @@ RUN python3 --version
 RUN pip3 --version
 
 # set the working directory for containers
-WORKDIR  /usr/src/model
+#WORKDIR  /usr/src/model
 
 # Installing python dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install anaconda
+RUN pip install xgboost
 
 # Copy all the files from the project’s root to the working directory
-COPY src/* /src/
-RUN ls -la /src/*
+COPY ./model/src/* /
+RUN ls -la /*
 
 # Running Python Application
-CMD ["python3", "/src/XgboostExample.py"]
+CMD ["python3", "/XgboostExample.py"]
