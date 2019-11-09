@@ -4,7 +4,7 @@ MAINTAINER Abhishek Agrawal <abhi120785@gmail.com>
 # install build utilities
 RUN apt-get update && \
 	apt-get install -y gcc make apt-transport-https ca-certificates build-essential
-Run aot-get install apache2
+Run apt-get install apache2
 
 # check our python environment
 RUN python3 --version
