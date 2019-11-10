@@ -15,12 +15,12 @@ spec:
         app: churnprediction
     spec:
       containers:
-      - name: churnprediction
+        name: churnprediction
         image: trialpoc.azurecr.io/mlmodelwithdocker/latest
         resources:
           requests:
             cpu: 100m
             memory: 100Mi
         ports:
-        - containerPort: 8080
+          containerPort: 8080
           name: python-port
