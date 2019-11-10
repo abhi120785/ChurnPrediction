@@ -26,6 +26,6 @@ stages:
         command: buildAndPush
         dockerfile: '**/dockerfile'
         containerRegistry: AzureContainerRegistry
-        repository: demos/BlazorServerWithDocker
+        repository: MLmodelwithdocker
         tags: |
           $(tag)
