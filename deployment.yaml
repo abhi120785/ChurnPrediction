@@ -1,26 +1,20 @@
-apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+apiVersion: apps/v1beta2 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: ml-model
-  labels:
-    app: churnprediction
+  name: app1
 spec:
-  selector:
-    matchLabels:
-      app: churnprediction
   replicas: 2
   template:
     metadata:
       labels:
-        app: churnprediction
+        app: app1
     spec:
       containers:
-        name: churnprediction
+        name: app1
         image: trialpoc.azurecr.io/mlmodelwithdocker/latest
         resources:
           requests:
-            cpu: 100m
+            cpu: 1024m
             memory: 100Mi
         ports:
-          containerPort: 8080
-          name: python-port
+          containerPort: 80
