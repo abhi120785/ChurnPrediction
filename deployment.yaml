@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta2 # for versions before 1.9.0 use apps/v1beta2
+apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
   name: app1
@@ -11,10 +11,6 @@ spec:
     spec:
       containers:
       - name: app1
-        image: trialpoc.azurecr.io/mlmodelwithdocker/latest
-        resources:
-          requests:
-            cpu: 1024m
-            memory: 100Mi
+        image: trialpoc.azurecr.io/mlmodelwithdocker/latest 
         ports:
         - containerPort: 80
