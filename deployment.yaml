@@ -1,3 +1,4 @@
+
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
@@ -11,7 +12,7 @@ spec:
     spec:
       containers:
       - name: k8s-todo
-        image: tshaiman/hello-node
+        image: trialpoc.azurecr.io/mlmodelwithdocker
         ports:
         - name: nodejs-port
           containerPort: 3000
