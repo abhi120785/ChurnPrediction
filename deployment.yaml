@@ -1,15 +1,17 @@
-apiVersion: apps/v1beta2
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: app1
+  name: visitor-app-deployment
 spec:
-  replicas: 2
+  replicas: 3
   template:
     metadata:
       labels:
-        app: app1
+        app: helloworld-db
     spec:
       containers:
-        image: trialpoc.azurecr.io/mlmodelwithdocker/latest 
+      - name: k8s-todo
+        image: tshaiman/hello-node
         ports:
-        - containerPort: 80
+        - name: nodejs-port
+          containerPort: 3000
