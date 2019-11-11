@@ -27,4 +27,4 @@ stages:
         dockerfile: '**/dockerfile'
         containerRegistry: AzureContainerRegistry
         repository: MLmodelwithdocker
-        tags: churn-prediction
+        tags: churn-prediction1
