@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: k8s-todo
-        image: trialpoc.azurecr.io/mlmodelwithdocker
+        image: trialpoc.azurecr.io/mlmodelwithdocker:52
         ports:
         - name: nodejs-port
           containerPort: 3000
