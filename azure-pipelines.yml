@@ -26,6 +26,6 @@ stages:
         command: buildAndPush
         dockerfile: '**/dockerfile'
         containerRegistry: AzureContainerRegistry
-        repository: MLmodelwithdocker
+        repository: MLmodelwithdocker/churn-prediction
         tags: |
           $(tag)
