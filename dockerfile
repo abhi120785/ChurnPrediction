@@ -15,7 +15,9 @@ RUN pip3 --version
 # Installing python dependencies
 RUN pip install anaconda
 RUN pip install xgboost
-RUN pip install python-git
+RUN pip install pandas
+RUN pip install numpy
+RUN pip install matplotlib
 
 # Copy all the files from the project’s root to the working directory
 COPY ./model/src/* /
