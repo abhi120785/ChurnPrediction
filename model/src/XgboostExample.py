@@ -37,3 +37,4 @@ classifier = XGBClassifier()
 classifier.fit(X_train,y_train)
 
 print("modelling done")
+print("This is new image")
