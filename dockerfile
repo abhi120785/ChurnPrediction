@@ -18,6 +18,7 @@ RUN pip install xgboost
 RUN pip install pandas
 RUN pip install numpy
 RUN pip install matplotlib
+RUN pip install sklearn
 
 # Copy all the files from the project’s root to the working directory
 COPY ./model/src/* /
