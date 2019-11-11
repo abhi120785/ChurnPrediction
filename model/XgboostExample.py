@@ -16,13 +16,13 @@ X = dataset.iloc[:,3:13].values
 y = dataset.iloc[:,13].values
 
 #Encode categorical data
-from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+from sklearn.preprocessing import OneHotEncoder
 
-labelencoder_X_1 = LabelEncoder()
+labelencoder_X_1 = OneHotEncoder()
 X[:,1]=labelencoder_X_1.fit_transform(X[:,1])
-labelencoder_X_2 = LabelEncoder()
+labelencoder_X_2 = OneHotEncoder()
 X[:,2]=labelencoder_X_2.fit_transform(X[:,2])
-onehotencoder=OneHotEncoder(categorical_features=[1]) 
+onehotencoder=OneHotEncoder() 
 X=onehotencoder.fit_transform(X).toarray()
 X=X[:,1:]
 
