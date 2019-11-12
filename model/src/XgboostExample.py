@@ -38,3 +38,4 @@ classifier.fit(X_train,y_train)
 
 print("modelling done")
 print("This is test new image")
+print("This is latest image")
