@@ -13,6 +13,7 @@ spec:
       containers:
       - name: k8s-todo
         image: trialpoc.azurecr.io/mlmodelwithdocker:latest
+        imagePullPolicy: "Always"
         ports:
         - name: nodejs-port
           containerPort: 3000
